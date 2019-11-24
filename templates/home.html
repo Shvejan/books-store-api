@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}home{% endblock %}
+{% block body %}
+  <h1>Welcome to the book store</h1><br><br>
+  <div>
+    <h3>Login</h3>
+    <form action="{{ url_for("login")}}" method="post"><br>
+      <input type="text" name="lname" placeholder="enter username"><br>
+      <input type="password" name="lpass" placeholder="enter password"><br>
+      <button type="submit">Login</button>
+    </form>
+    <br><br><br>
+
+    <h3>Sign up!</h3>
+    <form action="{{ url_for("signup") }}" method="post"><br>
+      <input type="text" name="sname" placeholder="enter username"><br>
+      <input type="password" name="spass" placeholder="enter password"><br>
+      <input type="email" name="semail" placeholder="enter email"><br>
+      <button type="submit" name="button">Sign up</button><br>
+    </form>
+  </div>
+
+
+{% endblock %}

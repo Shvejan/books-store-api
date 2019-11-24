@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      input[type=text], select,input[type=password],input[type=email]
+      {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      *{
+        background-color: rgb(27, 27, 27);
+        margin: auto;
+        color: white;
+      }
+
+      input[type=submit]:hover {
+      background-color: #45a049;
+      }
+
+      div {
+      border-radius: 5px;
+      padding: 20px;
+      }
+      button
+      {
+        border-radius: 10px;
+        width: 30%;
+        background-color: rgb(66, 62, 62);
+      }
+
+    </style>
+  </head>
+  <body>
+    {% block body %}{% endblock %}
+  </body>
+</html>
