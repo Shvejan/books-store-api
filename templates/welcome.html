@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block title %}welcome!{% endblock %}
+{% block body  %}
+  <h1>welcome boss!!</h1>
+<br><br><br><br><br>
+  <form class="" action="{{ url_for('logout') }}" method="post">
+    <button type="submit"  name="button">Logout</button>
+  </form>
+{% endblock %}
