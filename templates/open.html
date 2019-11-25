@@ -1,0 +1,23 @@
+{% extends  'layout.html' %}
+{% block title %}Book Derails{% endblock %}
+{% block body %}
+  <br><br>
+  <h1>{{ b.title }}</h1>
+  <h3>by {{ b.author }}, {{ b.year }}</h3>
+  <h4>isbn: {{b.isbn}}</h4>
+  <form action="{{ url_for("open",var=b.isbn) }}" method="post">
+    <textarea name="rev" rows="8" cols="80", placeholder="Type your review"></textarea>
+    <br>
+    <button type="submit" name="button">Post!</button>
+  </form>
+  <h3>Reviews:</h3>
+  <ol>
+    {% for x,y in all_rev.items() %}
+      <li>
+        <h4>user : {{ x }}</h4>
+        <p>review:  {{ y }}</p>
+      </li>
+    {%endfor%}
+  </ol>
+
+{% endblock %}

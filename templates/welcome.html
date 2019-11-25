@@ -3,7 +3,13 @@
 {% block title %}welcome!{% endblock %}
 {% block body  %}
   <h1>welcome boss!!</h1>
-<br><br><br><br><br>
+  <form action="{{ url_for('results') }}" method="post">
+    <input type="text" name= "exp" placeholder="enter title or author name or isbn ">
+    <button type="submit" name="button">search!</button>
+  </form>
+
+  <br><br><br><br><br>
+  <h2>books list</h2>
   <form class="" action="{{ url_for('logout') }}" method="post">
     <button type="submit"  name="button">Logout</button>
   </form>

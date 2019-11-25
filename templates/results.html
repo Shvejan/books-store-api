@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block title %}results!{% endblock %}
+{% block body %}
+<h1>Search results</h1><br><br><br>
+  <table id="bookstable">
+    <thead>
+        <th>S.No</th>
+        <th>ISBN</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Year</th>
+    </thead>
+    <tbody>
+      {% for a in x %}
+      <tr>
+          <td>{{ a.id }}</td>
+          <td>{{ a.isbn }}</td>
+          <td>
+            <a href="{{url_for('open', var=a.isbn)}}">{{ a.title }}</a>
+          </td>
+          <td>{{ a.author }}</td>
+          <td>{{ a.year }}</td>
+
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+    <br>
+
+{% endblock %}

@@ -16,6 +16,7 @@
       }
 
       *{
+        padding: 8px;
         background-color: rgb(27, 27, 27);
         margin: auto;
         color: white;
@@ -35,10 +36,32 @@
         width: 30%;
         background-color: rgb(66, 62, 62);
       }
+      #bookstable {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 70%;
+      }
+
+      #bookstable td, #bookstable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #bookstable tr:nth-child(even){background-color: #f2f2f2;}
+
+      #bookstable tr:hover {background-color: #ddd;}
+
+      #bookstable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+      }
 
     </style>
   </head>
   <body>
-    {% block body %}{% endblock %}
   </body>
 </html>
+{% block body %}{% endblock %}
